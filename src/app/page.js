@@ -8,6 +8,7 @@ const ImageUpload = () => {
   // Function to handle file selection
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
+    console.log(file,'file')
     if (file) {
       const reader = new FileReader();
       reader.onload = (event) => {
@@ -16,6 +17,8 @@ const ImageUpload = () => {
       reader.readAsDataURL(file); // Convert the file to a base64 string
     }
   };
+
+  console.log(image,'image');
 
   return (
     <div className='flex justify-center items-center h-screen'>
